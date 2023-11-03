@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const HomeContainer = styled.div`
   width: 100%;
   margin: auto;
-
+ /* justify-content: flex-start; */
+ align-items: flex-start;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -13,7 +14,7 @@ export const HomeContainer = styled.div`
 
   h2 {
     color: ${({ theme }) => theme.colors.primary[1]};
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   p {
@@ -26,14 +27,19 @@ export const HomeContainer = styled.div`
     background-color: ${({ theme }) => theme.colors.primary[0]};
     width: fit-content;
     padding: 1.5rem 4.5rem;
-    /* margin-top: 4rem; */
-    margin: auto;
+    margin-top: 4rem;
+    /* margin: auto; */
     color: white;
     text-decoration: none;
     border-radius: 15px;
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+    
+    /* align-items: center; */
+justify-content: center;
+
+
     h2 {
       font-size: 1.9rem;
     }
@@ -44,6 +50,19 @@ export const HomeContainer = styled.div`
     .linkB {
       padding: 1rem 1rem;
       width: 50%;
+      /* margin: auto; */
     }
   }
+ 
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+      align-items: center;
+
+  }
+
+
 `;
+
+
+
+
+
